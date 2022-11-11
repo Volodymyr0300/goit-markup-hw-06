@@ -536,9 +536,8 @@ ul {
 }
 .form-field-checkbox {
   position: absolute;
-  background-image: url(../img/not-checked.svg);
+  background-image: url(../images/icon-notchecked.svg);
   /* background-color: tomato; */
-  /* background-image: url(../images/checked.svg); */
   background-repeat: no-repeat;
   width: 16px;
   height: 15px;
@@ -546,6 +545,9 @@ ul {
   left: 13px;
 }
 
+.form-field-input:checked + .form-field-checkbox {
+  background-image: url(../images/icon-checked.svg);
+}
 .form-field-input-text {
   font-style: normal;
   font-weight: 400;
