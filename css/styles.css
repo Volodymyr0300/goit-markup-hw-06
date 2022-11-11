@@ -468,11 +468,19 @@ ul {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
 }
 .form-label-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
+}
+
+.form-label-input-name:not(:placeholder-shown) + .form-label-icon,
+.form-label-input-phone:not(:placeholder-shown) + .form-label-icon,
+.form-label-input-email:not(:placeholder-shown) + .form-label-icon {
+  transition: var(--trans-fill);
+  fill: var(--hover-focus);
 }
 
 .form-field:hover .form-label-icon,
@@ -515,15 +523,34 @@ ul {
   margin-bottom: 30px;
 }
 .form-label-input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.form-field-checkbox {
+  display: flex;
+  align-items: center;
+}
+.form-label-checkbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
-  background-color: #212121;
-  margin-right: 8px;
+  background-image: url(../images/not-checked.svg);
 }
-.form-label-input-checkbox:checked {
-  background-color: var(--hover-focus);
-  transition: var(--trans-bc);
+
+.form-label-input-checkbox:checked + .form-label-checkbox-icon {
+  border-color: transparent;
+  /* background-color: var(--hover-focus); */
+  background-image: url(../images/symbol-defs-4.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
+
 .form-label-input-text {
   font-style: normal;
   font-weight: 400;
@@ -531,8 +558,9 @@ ul {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-left: 8px;
 }
-a,
+
 .label-input-link {
   font-style: normal;
   font-weight: 400;
@@ -548,6 +576,7 @@ a,
 
 .link {
 }
+
 .form-btn {
   font-family: "Roboto", sans-serif;
   background-color: var(--hover-focus);
