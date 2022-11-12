@@ -82,12 +82,6 @@ ul {
   padding-right: 15px;
 }
 
-/* :hover,
-:focus,
-.main-clients-icons-link:hover .main-clients-icon,
-.main-clients-icons-link:focus .main-clients-icon {
-} */
-
 /* 
 !!! |=================================
 !!! | header
@@ -113,7 +107,6 @@ ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-
   display: flex;
   align-items: center;
 }
@@ -140,11 +133,9 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
-
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   position: relative;
 }
 
@@ -171,11 +162,9 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
-
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   position: relative;
 }
 
@@ -201,11 +190,9 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
-
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   position: relative;
 }
 
@@ -242,7 +229,6 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color);
-
   display: block;
 }
 
@@ -296,7 +282,6 @@ ul {
   background-color: var(--main-section-background);
   padding-top: 200px;
   padding-bottom: 200px;
-
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -335,7 +320,6 @@ ul {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-
   padding: 10px 32px;
   border-radius: 4px;
   border-color: transparent;
@@ -369,7 +353,6 @@ ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: opacity 150ms linear, visibility 150ms linear;
 }
 .modal {
@@ -408,8 +391,8 @@ ul {
 
 .main-section-button-close:hover .close-button-icon,
 .main-section-button-close:focus .close-button-icon {
-  color: var(--hover-focus);
-  transition: var(--trans-color);
+  fill: var(--hover-focus);
+  transition: var(--trans-fill);
 }
 
 .main-section-button:hover,
@@ -434,7 +417,6 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-
   margin-top: 40px;
   margin-bottom: 12px;
 }
@@ -450,7 +432,7 @@ ul {
   position: relative;
   margin-bottom: 10px;
 }
-.form-label-text {
+.form-field-text {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -479,14 +461,14 @@ ul {
 .form-label-input-name:not(:placeholder-shown) + .form-label-icon,
 .form-label-input-phone:not(:placeholder-shown) + .form-label-icon,
 .form-label-input-email:not(:placeholder-shown) + .form-label-icon {
-  transition: var(--trans-fill);
   fill: var(--hover-focus);
+  transition: var(--trans-fill);
 }
 
 .form-field:hover .form-label-icon,
 .form-field:focus .form-label-icon {
-  transition: var(--trans-fill);
   fill: var(--hover-focus);
+  transition: var(--trans-fill);
 }
 
 .form-field:hover .input,
@@ -512,8 +494,10 @@ ul {
   color: rgba(117, 117, 117, 0.5);
   padding: 12px 16px;
   resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
-/* !!! checked */
+/* !!! checkbox */
 .form-field-option {
   display: flex;
   align-items: center;
@@ -521,7 +505,6 @@ ul {
   flex-direction: row;
   margin-top: 10px;
   margin-bottom: 30px;
-
   position: relative;
 }
 .form-field-input {
@@ -537,16 +520,18 @@ ul {
 .form-field-checkbox {
   position: absolute;
   background-image: url(../images/icon-notchecked.svg);
-  /* background-color: tomato; */
   background-repeat: no-repeat;
   width: 16px;
   height: 15px;
   top: 5px;
   left: 13px;
+  background-size: contain;
 }
 
 .form-field-input:checked + .form-field-checkbox {
   background-image: url(../images/icon-checked.svg);
+  background-color: var(--hover-focus);
+  border-radius: 2px;
 }
 .form-field-input-text {
   font-style: normal;
@@ -582,7 +567,6 @@ ul {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-
   padding: 10px 52px;
   border-radius: 4px;
   border-color: transparent;
@@ -638,7 +622,6 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-color);
-
   margin-bottom: 10px;
 }
 .main-products-description {
@@ -724,7 +707,6 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
-
   margin-bottom: 50px;
 }
 
@@ -787,7 +769,6 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-
   transition: var(--trans-bc);
 }
 .icons-social-link:hover,
@@ -1035,7 +1016,6 @@ ul {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color);
-
   margin-bottom: 4px;
 }
 
@@ -1056,7 +1036,6 @@ ul {
 
 .footer {
   background-color: var(--footer-background-color);
-
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1175,13 +1154,8 @@ ul {
 !!! |=================================
 */
 
-.footer-form {
-  margin-left: 93px;
-}
 .footer-form-email {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  margin-left: 93px;
 }
 .footer-form-label-button {
   display: flex;
@@ -1211,10 +1185,6 @@ ul {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-form-button {
-  /* margin-left: 12px; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 .footer-form-submit {
   margin-left: 12px;
@@ -1225,8 +1195,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: block; */
   height: 50px;
+  border: none;
 }
 .footer-form-submit-text {
   color: #ffffff;
@@ -1238,9 +1208,7 @@ ul {
   line-height: 30px;
   display: flex;
   letter-spacing: 0.06em;
-  margin-left: 28px;
 }
 .footer-form-icon {
   fill: #ffffff;
-  margin-right: 28px;
 }
